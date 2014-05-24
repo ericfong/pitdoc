@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+    
+    <servlet>
+        <servlet-name>GaeServlet</servlet-name>
+        <servlet-class>com.eddyy.gae.GaeServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GaeServlet</servlet-name>
+        <url-pattern>/*</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+	    <display-name>Remote API Servlet</display-name>
+	    <servlet-name>RemoteApiServlet</servlet-name>
+	    <servlet-class>com.google.apphosting.utils.remoteapi.RemoteApiServlet</servlet-class>
+	    <load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+	    <servlet-name>RemoteApiServlet</servlet-name>
+	    <url-pattern>/remote_api</url-pattern>
+	</servlet-mapping>
+    
+    
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+    </welcome-file-list>
+    
+    <mime-mapping> 
+        <extension>woff</extension>
+        <mime-type>application/font-woff</mime-type> 
+    </mime-mapping>     
+    
+    <!-- 
+    <security-constraint>
+	  <web-resource-collection>
+	    <url-pattern>/**</url-pattern>
+	  </web-resource-collection>
+	  <user-data-constraint>
+	    <transport-guarantee>CONFIDENTIAL</transport-guarantee>
+	  </user-data-constraint>
+	</security-constraint>
+	 -->
+	
+</web-app>

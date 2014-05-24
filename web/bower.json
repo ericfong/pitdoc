@@ -1,0 +1,30 @@
+{
+  "name": "eddyy-web",
+  "version": "1.0.0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "ext",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "*",
+    "jquery": "*",
+    "jquery-ui": "*",
+    "jquery.transit": "*",
+    "rangy": "*",
+    "underscore": "*",
+    "underscore.string": "*",
+    "font-awesome": "*",
+    "jsPlumb": "*",
+    "react": "*",
+    "raf.js": "*",
+    "jszip": "*",
+    "bootstrap-modal": "~2.1.0",
+    "uri.js": "~1.11.2",
+    "fastclick": "~0.6.11",
+    "google-diff-match-patch-js": "~1.0.0"
+  }
+}

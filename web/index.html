@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en" manifest="gen.index.appcache">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
+
+<% 
+_.forEach(files, function(file) {
+    if (file.match(/\.css$/)) {
+%><link href="<%= file %>" rel="stylesheet"></link> 
+<% 
+    } else if (file.match(/\.js$/)) {
+%><script src="<%= file %>"></script> 
+<%
+    }
+})
+ %>
+</head>
+<body>
+<div class="onlyShowTop" data-reactid=".1238n41651c" data-react-checksum="1940663573"><div data-reactid=".1238n41651c.$about"><div data-reactid=".1238n41651c.$about.0"><nav class="navbar-base" data-reactid=".1238n41651c.$about.0.0"><div class="navbar navbar-default navbar-fixed-top navbar-inverse" data-reactid=".1238n41651c.$about.0.0.0"><div class="container" data-reactid=".1238n41651c.$about.0.0.0.0"><ul class="nav navbar-nav" data-reactid=".1238n41651c.$about.0.0.0.0.0"><li data-reactid=".1238n41651c.$about.0.0.0.0.0.0"><a href="#" data-reactid=".1238n41651c.$about.0.0.0.0.0.0.0"><span class="fa fa-folder-open-o" data-reactid=".1238n41651c.$about.0.0.0.0.0.0.0.0"></span><span class="hidden-xs" data-reactid=".1238n41651c.$about.0.0.0.0.0.0.0.1"> Locals</span></a></li><li data-reactid=".1238n41651c.$about.0.0.0.0.0.1"><a href="#" data-reactid=".1238n41651c.$about.0.0.0.0.0.1.0"><span class="fa fa-file-o" data-reactid=".1238n41651c.$about.0.0.0.0.0.1.0.0"></span><span class="hidden-xs" data-reactid=".1238n41651c.$about.0.0.0.0.0.1.0.1"> New Page</span></a></li></ul><ul class="nav navbar-nav navbar-right" data-reactid=".1238n41651c.$about.0.0.0.0.1"><li data-reactid=".1238n41651c.$about.0.0.0.0.1.1"><a href="#" data-reactid=".1238n41651c.$about.0.0.0.0.1.1.0"><span class="fa fa-fw fa-user" data-reactid=".1238n41651c.$about.0.0.0.0.1.1.0.0"></span><span data-reactid=".1238n41651c.$about.0.0.0.0.1.1.0.1"><span class="hidden-xs" data-reactid=".1238n41651c.$about.0.0.0.0.1.1.0.1.0"> Login</span></span></a></li></ul></div></div></nav></div><div class="container text-center" data-reactid=".1238n41651c.$about.1"><p style="height:20px;" data-reactid=".1238n41651c.$about.1.0"></p><div class="inner cover" data-reactid=".1238n41651c.$about.1.1"><h1 class="cover-heading" data-reactid=".1238n41651c.$about.1.1.0"><span data-reactid=".1238n41651c.$about.1.1.0.0">The Doc that Merge!</span></h1><p class="lead" data-reactid=".1238n41651c.$about.1.1.1">Version conflicts can merge itself.</p></div><p style="height:20px;" data-reactid=".1238n41651c.$about.1.2"></p><div class="row" data-reactid=".1238n41651c.$about.1.3"><div class="col-sm-4" data-reactid=".1238n41651c.$about.1.3.0"><h1 style="height:110px;" data-reactid=".1238n41651c.$about.1.3.0.0"><span class="glyphicon glyphicon-import" style="font-size:200%;" data-reactid=".1238n41651c.$about.1.3.0.0.0"></span></h1><p style="font-size:200%;" data-reactid=".1238n41651c.$about.1.3.0.1">Down &amp; Edit</p><p data-reactid=".1238n41651c.$about.1.3.0.2">Download and edit in your own device or browser. Free from the dependency of servers.</p></div><div class="col-sm-4" data-reactid=".1238n41651c.$about.1.3.1"><h1 style="height:110px;" data-reactid=".1238n41651c.$about.1.3.1.0"><span class="glyphicon glyphicon-export" style="font-size:200%;" data-reactid=".1238n41651c.$about.1.3.1.0.0"></span></h1><p style="font-size:200%;" data-reactid=".1238n41651c.$about.1.3.1.1">Upload</p><p data-reactid=".1238n41651c.$about.1.3.1.2">Upload when you feel ready. Typos won&#x27;t be shown to your Boss.</p></div><div class="col-sm-4" data-reactid=".1238n41651c.$about.1.3.2"><h1 style="height:110px;" data-reactid=".1238n41651c.$about.1.3.2.0"><span class="fa fa-code-fork" style="font-size:200%;" data-reactid=".1238n41651c.$about.1.3.2.0.0"></span></h1><p style="font-size:200%;" data-reactid=".1238n41651c.$about.1.3.2.1">Merge</p><p data-reactid=".1238n41651c.$about.1.3.2.2">Auto merge the version conflicts between you and your teammates.</p></div></div></div></div></div>
+</body>
+<script>Main.main()</script>
+</html>

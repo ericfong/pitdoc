@@ -1,0 +1,152 @@
+/*!
+ * Bootstrap v3.0.0
+ *
+ * Copyright 2013 Twitter, Inc
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Designed and built with all the love in the world by @mdo and @fat.
+ */
+
+// Core variables and mixins
+//@import "bootstrap/less/variables.less";
+@import "bootstrap-variables.less";
+// ======================================================================
+//@font-size-base:          16px;
+//@font-size-large:         round(@font-size-base * 1.25, 2); // ~18px
+//@font-size-small:         round(@font-size-base * 0.85, 2); // ~12px
+//
+//@font-size-h1:            round(@font-size-base * 2.6, 2); // ~36px
+//@font-size-h2:            round(@font-size-base * 2.15, 2); // ~30px
+//@font-size-h3:            round(@font-size-base * 1.7, 2); // ~24px
+//@font-size-h4:            round(@font-size-base * 1.25, 2); // ~18px
+//@font-size-h5:            @font-size-base;
+//@font-size-h6:            round(@font-size-base * 0.85, 2); // ~12px
+//
+//@line-height-base:        1.428571429; // 20/14
+//@line-height-computed:    round(@font-size-base * @line-height-base, 2); // ~20px
+//
+//@jumbotron-font-size:            round(@font-size-base * 1.5, 2);
+
+
+@icon-font-path:          "../../web/ext/bootstrap/dist/fonts/";
+
+
+@navbar-default-color:             #ddd;
+@navbar-default-bg:                #2FA4E7;
+@navbar-default-border:            darken(@navbar-default-bg, 6.5%);
+
+// Navbar links
+@navbar-default-link-color:                #fff;
+@navbar-default-link-hover-color:          #fff;
+@navbar-default-link-hover-bg:             darken(@navbar-default-bg, 10%);
+@navbar-default-link-active-color:         #fff;
+@navbar-default-link-active-bg:            darken(@navbar-default-bg, 10%);
+@navbar-default-link-disabled-color:       #ddd;
+@navbar-default-link-disabled-bg:          transparent;
+
+// Navbar brand label
+@navbar-default-brand-color:               @navbar-default-link-color;
+@navbar-default-brand-hover-color:         #fff;
+@navbar-default-brand-hover-bg:            none;
+
+// Navbar toggle
+@navbar-default-toggle-hover-bg:           darken(@navbar-default-bg, 10%);
+@navbar-default-toggle-icon-bar-bg:        #fff;
+@navbar-default-toggle-border-color:       darken(@navbar-default-bg, 10%);
+
+
+// Inverted navbar
+// Reset inverted navbar basics
+@navbar-inverse-color:                      #fff;
+@navbar-inverse-bg:                         #6f5499;
+@navbar-inverse-border:                     darken(@navbar-inverse-bg, 5%);
+
+// Inverted navbar links
+@navbar-inverse-link-color:                 #fff;
+@navbar-inverse-link-hover-color:           #fff;
+@navbar-inverse-link-hover-bg:              darken(@navbar-inverse-bg, 5%);
+@navbar-inverse-link-active-color:          #fff;
+@navbar-inverse-link-active-bg:             darken(@navbar-inverse-bg, 5%);
+@navbar-inverse-link-disabled-color:        #ccc;
+@navbar-inverse-link-disabled-bg:           transparent;
+
+// Inverted navbar brand label
+@navbar-inverse-brand-color:                @navbar-inverse-link-color;
+@navbar-inverse-brand-hover-color:          #fff;
+@navbar-inverse-brand-hover-bg:             none;
+
+// Inverted navbar toggle
+@navbar-inverse-toggle-hover-bg:            darken(@navbar-inverse-bg, 5%);
+@navbar-inverse-toggle-icon-bar-bg:         #fff;
+@navbar-inverse-toggle-border-color:        darken(@navbar-inverse-bg, 5%);
+
+
+// ======================================================================
+
+
+@import "bootstrap/less/mixins.less";
+
+// Reset
+@import "bootstrap/less/normalize.less";
+@import "bootstrap/less/print.less";
+
+// Core CSS
+@import "bootstrap/less/scaffolding.less";
+@import "bootstrap/less/type.less";
+@import "bootstrap/less/code.less";
+@import "bootstrap/less/grid.less";
+@import "bootstrap/less/tables.less";
+@import "bootstrap/less/forms.less";
+@import "bootstrap/less/buttons.less";
+
+// Components
+@import "bootstrap/less/component-animations.less";
+@import "bootstrap/less/glyphicons.less";
+html {
+    @grid-float-breakpoint: 100px;
+    @grid-float-breakpoint-max: 99px; 
+    @import "bootstrap/less/dropdowns.less";
+}
+@import "bootstrap/less/button-groups.less";
+@import "bootstrap/less/input-groups.less";
+@import "bootstrap/less/navs.less";
+html {
+    @grid-float-breakpoint: 100px;
+    @grid-float-breakpoint-max: 99px; 
+    @import "bootstrap/less/navbar.less";
+}
+@import "bootstrap/less/breadcrumbs.less";
+@import "bootstrap/less/pagination.less";
+@import "bootstrap/less/pager.less";
+@import "bootstrap/less/labels.less";
+@import "bootstrap/less/badges.less";
+@import "bootstrap/less/jumbotron.less";
+@import "bootstrap/less/thumbnails.less";
+@import "bootstrap/less/alerts.less";
+@import "bootstrap/less/progress-bars.less";
+@import "bootstrap/less/media.less";
+@import "bootstrap/less/list-group.less";
+@import "bootstrap/less/panels.less";
+@import "bootstrap/less/wells.less";
+@import "bootstrap/less/close.less";
+
+// Components w/ JavaScript
+@import "bootstrap/less/modals.less";
+@import "bootstrap/less/tooltip.less";
+@import "bootstrap/less/popovers.less";
+@import "bootstrap/less/carousel.less";
+
+// Utility classes
+@import "bootstrap/less/utilities.less";
+@import "bootstrap/less/responsive-utilities.less";
+
+
+
+
+
+// plus font-awesome
+@import "font-awesome.less";
+//@typiconsDir: "../less/typicons.2.0";
+//@import "typicons.2.0/typicons.less";
+//@import "bootstrap-switch/bootstrapSwitch.less";

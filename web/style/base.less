@@ -1,0 +1,403 @@
+//@import "bootstrap/less/variables.less";
+@import (reference) "bootstrap.less";
+//@import "bootstrap/less/mixins.less";
+@import "my-mixins.less";
+
+@gray-lighter-more:  lighten(@gray-lighter, 3%);
+@gray-light-mix: mix(@gray-light, @gray-lighter);
+@gray-mix: mix(@gray, @gray-light);
+//@silver-base:   @gray-lighter;
+//@silver-dark1:  darken(@silver-base, 5%);
+//@silver-dark2:  darken(@silver-base, 10%);
+//@silver-dark3:  darken(@silver-base, 15%);
+//@silver-dark4:  darken(@silver-base, 20%);
+
+//@body-bg-gray:  lighten(@silver-base, 6%);
+//@silver-fade:   fadeout(@silver-dark1, 10%);
+
+
+
+
+
+
+
+// Override Bootstrap default
+html, body {
+    //overflow: visible;
+    //-webkit-tap-highlight-color: rgba(0,0,0,0);
+
+    font-size: @font-size-base;
+    //font-size: 16px;
+    //font-size: 5mm;
+    //line-height: 7mm;
+}
+
+// http://stackoverflow.com/questions/17555682/height-100-or-min-height-100-for-html-and-body-elements
+//html {
+//    height: 100%;
+//    //position:relative;
+//}
+//body {
+//    min-height: 100%;
+//    //position:relative;
+//}
+
+// remove 300ms delay in IE10 (from fastclick)
+a, input, button {
+    -ms-touch-action: none !important;
+}
+
+// fix bootstrap alert a no pointer
+a {
+    cursor: pointer;
+}
+
+//.btn-default {
+//    color: @link-color;
+//}
+.btn-link {
+    &:hover, &:focus, &:active {
+        text-decoration: none;
+    }
+}
+
+//.btn-inverse {
+//  color: @navbar-inverse-link-color;
+//  background-color: @navbar-inverse-bg;
+//  border-color: @navbar-inverse-border;
+//
+//  &:hover,
+//  &:focus,
+//  &:active,
+//  &.active,
+//  .open .dropdown-toggle& {
+//    color: @navbar-inverse-link-hover-color;
+//    background-color: lighten(@navbar-inverse-bg, 8%);
+//        border-color: darken(@navbar-inverse-border, 12%);
+//  }
+//  &:active,
+//  &.active,
+//  .open .dropdown-toggle& {
+//    background-image: none;
+//  }
+//  &.disabled,
+//  &[disabled],
+//  fieldset[disabled] & {
+//    &,
+//    &:hover,
+//    &:focus,
+//    &:active,
+//    &.active {
+//      background-color: @navbar-inverse-bg;
+//          border-color: @navbar-inverse-border;
+//    }
+//  }
+//
+//  .badge {
+//    color: @navbar-inverse-bg;
+//    background-color: @navbar-inverse-link-color;
+//  }  
+//}
+.btn-transparent {
+  .button-variant(@link-color; transparent; @link-color);
+}
+.marginLeftRight {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.positionRelative {
+    position: relative;
+}
+.nowrap {
+    white-space:nowrap;   
+}
+//.text-overflow {
+//    text-overflow: ellipsis;
+//    overflow-x: hidden;
+//}
+.nowrap-ellipsis {
+    white-space:nowrap;   
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.badge-danger {
+    background-color: @brand-danger;
+}
+
+.modal-vertical-centered {
+    position: fixed; top: 50%; left: 0; right:0; width:100%; margin: 0;
+    transform: translate(0, -50%) !important;
+    -ms-transform: translate(0, -50%) !important; /* IE 9 */
+    -webkit-transform: translate(0, -50%) !important; /* Safari and Chrome */
+    .container {
+        padding-left: 30px; 
+        padding-right: 30px; 
+    }
+}
+.modal-fullwidth {
+    width:100%;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.abs-left {
+    position:absolute; 
+    top:50%; left:0;
+    .transform(translate(0,-50%));
+}
+.abs-right {
+    position:absolute; 
+    top:50%; right:0;
+    .transform(translate(0,-50%));
+}
+.abs-center {
+    position: absolute; 
+    top:50%; left:50%;
+    .transform(translate(-50%,-50%));    
+}
+.abs-lt {
+    position:absolute; top:0; right:0;
+}
+.abs-lb {
+    position:absolute; bottom:0; left:0;
+}
+.abs-rt {
+    position:absolute; top:0; right:0;
+}
+.abs-rb {
+    position:absolute; bottom:0; right:0;
+}
+        
+
+
+// common classes
+.tb {
+  display: table;
+  width: 100%;
+  & > * {
+      display: table-cell;
+  }
+  .tb-min {
+      width: 1px;
+  } 
+  .tb-max {
+      width: 100%;
+  } 
+  .tb-spacing {
+      &:not(:first-child) {
+          padding-left: 5px;
+      }
+  } 
+  .tb-vmiddle {
+      vertical-align: middle;
+  }
+}
+
+// paper like style, bg should be grays
+//.card {
+//    background-color: @body-bg;
+//    border: 1px solid @gray-light-mix;
+//    .border-radius(3px);
+//    .box-shadow(0px 1px 1px rgba(0, 0, 0, 0.1));
+//    padding: 0px 5px;
+//}
+
+//.list-right-btn {
+//    padding-right:0;
+//}
+
+
+[contentEditable=true]:empty:not(:focus):before{
+    content: attr(placeholder);
+    color: @gray-light;
+    font-style: italic;
+}
+.plain[contentEditable=true]{
+    &:focus, &:active {
+        //border: 0;
+        // cancel chrome user-agent highlight
+        outline: none;
+        //.box-shadow(none);
+    }
+}
+
+textarea.autosize {
+  resize: none;
+  display: inline-block;
+  width: 100%;
+  .box-sizing(border-box);
+  overflow: hidden;
+}
+.plaininput {
+    background-color: transparent;
+    color: inherit;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    .box-shadow(none);
+    word-wrap: break-word;
+    -webkit-line-break: after-white-space;
+    overflow: visible;
+}
+.plaininput:focus, .plaininput:active {
+    border: 0;
+    outline: none;
+    .box-shadow(none);
+}
+
+
+
+//.config-form {
+//    background-color: @body-bg;
+//    
+//    .form-heading {
+//        background-color: @gray-lighter;
+//        padding: 10px 15px 5px 15px;
+//        font-weight: bold;
+//        color: @gray-light;
+//    }
+//    .form-group {
+//        margin: 0;
+//        padding: 5px 0px 5px 0px;
+//        border-bottom: 1px solid @gray-lighter;
+//        &:last-child {
+//            border-bottom: none;
+//        }
+//    }
+//    .larger-padding {
+//        padding-bottom: 8px;
+//    }
+//    .plaininput {
+//        border-bottom: 1px dotted @gray-lighter;
+//        border-radius: 0;
+//        margin-bottom: 10px;
+//    }
+//}
+
+
+
+.clicked {
+    .animation(clicked 300ms ease-in-out);
+}
+.clicked-frames () {
+  0%   { .transform(''); }
+  50%   { .transform(scale3d(0.85, 0.85, 0)); }
+  100%   { .transform(''); }
+}
+@-webkit-keyframes clicked {.clicked-frames;}
+@-moz-keyframes clicked {.clicked-frames;}
+@-ms-keyframes clicked {.clicked-frames;}
+@-o-keyframes clicked {.clicked-frames;}
+@keyframes clicked {.clicked-frames;}
+
+.saved {
+    .animation(saved 300ms ease-in-out);
+}
+.saved-frames () {
+  0%   { .transform(''); }
+  50%   { .transform(scale3d(1.1, 1.1, 0)); }
+  100%   { .transform(''); }
+}
+@-webkit-keyframes saved {.saved-frames;}
+@-moz-keyframes saved {.saved-frames;}
+@-ms-keyframes saved {.saved-frames;}
+@-o-keyframes saved {.saved-frames;}
+@keyframes saved {.saved-frames;}
+
+
+
+
+
+//@dppx1-5: ~"only screen and (-webkit-min-device-pixel-ratio: 1.5)",
+//          ~"only screen and (   min--moz-device-pixel-ratio: 1.5)",
+//          ~"only screen and (     -o-min-device-pixel-ratio: 3/2)",
+//          ~"only screen and (        min-device-pixel-ratio: 1.5)",
+//          ~"only screen and (                min-resolution: 1.5dppx)";
+//@dppx2:   ~"only screen and (-webkit-min-device-pixel-ratio: 2)",
+//          ~"only screen and (   min--moz-device-pixel-ratio: 2)",
+//          ~"only screen and (     -o-min-device-pixel-ratio: 2/1)",
+//          ~"only screen and (        min-device-pixel-ratio: 2)",
+//          ~"only screen and (                min-resolution: 2dppx)";
+//@dppx2-5: ~"only screen and (-webkit-min-device-pixel-ratio: 2.5)",
+//          ~"only screen and (   min--moz-device-pixel-ratio: 2.5)",
+//          ~"only screen and (     -o-min-device-pixel-ratio: 5/2)",
+//          ~"only screen and (        min-device-pixel-ratio: 2.5)",
+//          ~"only screen and (                min-resolution: 2.5dppx)";
+//@dppx3:   ~"only screen and (-webkit-min-device-pixel-ratio: 3)",
+//          ~"only screen and (   min--moz-device-pixel-ratio: 3)",
+//          ~"only screen and (     -o-min-device-pixel-ratio: 3/1)",
+//          ~"only screen and (        min-device-pixel-ratio: 3)",
+//          ~"only screen and (                min-resolution: 3dppx)";
+
+
+// // Should use target-densityDpi to control
+//@media @dppx1-5 {
+//    body { font-size: 150%; }
+//}
+//@media @dppx2 {
+//    body { font-size: 200%; }
+//}
+//@media @dppx2-5 {
+//    body { font-size: 250%; }
+//}
+//@media @dppx3 {
+//    body { font-size: 300%; }
+//}
+//// from https://github.com/twbs/bootstrap/issues/8373
+//@media only screen and (min-width: 320px) {
+//  /* Small screen, non-retina */
+//}
+//
+//@media
+//only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: 320px),
+//only screen and (   min--moz-device-pixel-ratio: 2)      and (min-width: 320px),
+//only screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: 320px),
+//only screen and (        min-device-pixel-ratio: 2)      and (min-width: 320px),
+//only screen and (                min-resolution: 192dpi) and (min-width: 320px),
+//only screen and (                min-resolution: 2dppx)  and (min-width: 320px) {
+//  /* Small screen, retina, stuff to override above media query */
+//}
+//
+//@media only screen and (min-width: 700px) {
+//  /* Medium screen, non-retina */
+//}
+//
+//@media
+//only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: 700px),
+//only screen and (   min--moz-device-pixel-ratio: 2)      and (min-width: 700px),
+//only screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: 700px),
+//only screen and (        min-device-pixel-ratio: 2)      and (min-width: 700px),
+//only screen and (                min-resolution: 192dpi) and (min-width: 700px),
+//only screen and (                min-resolution: 2dppx)  and (min-width: 700px) {
+//  /* Medium screen, retina, stuff to override above media query */
+//}
+//
+//@media only screen and (min-width: 1000px) {
+//  /* Large screen, non-retina */
+//}
+//
+//@media
+//only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: 1000px),
+//only screen and (   min--moz-device-pixel-ratio: 2)      and (min-width: 1000px),
+//only screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: 1000px),
+//only screen and (        min-device-pixel-ratio: 2)      and (min-width: 1000px),
+//only screen and (                min-resolution: 192dpi) and (min-width: 1000px),
+//only screen and (                min-resolution: 2dppx)  and (min-width: 1000px) {
+//  /* Large screen, retina, stuff to override above media query */
+//}
+//
+//
+//@media only screen and (min-width: 1200px) {
+//  /* Large screen, non-retina */
+//}
+//
+//@media
+//only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: 1200px),
+//only screen and (   min--moz-device-pixel-ratio: 2)      and (min-width: 1200px),
+//only screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: 1200px),
+//only screen and (        min-device-pixel-ratio: 2)      and (min-width: 1200px),
+//only screen and (                min-resolution: 192dpi) and (min-width: 1200px),
+//only screen and (                min-resolution: 2dppx)  and (min-width: 1200px) {
+//  /* Large screen, retina, stuff to override above media query */
+//}
+

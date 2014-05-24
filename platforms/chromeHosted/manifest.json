@@ -1,0 +1,19 @@
+{
+    "manifest_version": 2,
+    "name": "Pithway Doc",
+    "description": "The Doc that Merge!",
+    "version": "0.8.0",
+    "app": {
+        "urls": [
+          "*://www.pithway.com/"
+        ],
+        "launch": {
+          "web_url": "http://www.pithway.com/#/"
+        }
+      },
+      "permissions": [
+        "unlimitedStorage",
+        "notifications"
+      ],
+    "icons": { "16": "res/icon-16.png", "128": "res/icon-128.png" }
+}

@@ -1,0 +1,18 @@
+{
+    "name": "Edify",
+    "description": "Co-operation Even WithOut Internet",
+    "version": "0.1",
+    "app": {
+        "background": {
+            "scripts": ["background.js"]
+        }
+    },
+    "sandbox": {
+        "pages": ["gen.chrome.html"]
+    },    
+    "permissions": [
+                    "unlimitedStorage","syncFileSystem",
+                    { "mediaGalleries": ["read", "allAutoDetected"] }
+                    ],
+    "icons": { "16": "res/icon-16.png", "128": "res/icon-128.png" }
+}

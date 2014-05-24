@@ -1,0 +1,11 @@
+CACHE MANIFEST
+#t=<%= Date.now() %>
+NETWORK:
+*
+CACHE:
+index.html
+<% 
+_.forEach(appCacheFiles, function(file) { 
+    print(file+'\n');
+}) 
+%>
